@@ -130,7 +130,7 @@ Idea 2018
 </html>
 ```
 10. 编辑运行配置选项:
-![image](https://github.com/AngelaViVi/Summer/blob/master/Doc/shot/005-运行配置选项.png)
+![image](https://github.com/AngelaViVi/Summer/blob/master/Doc/shot/005-新建运行配置选项.png)
 1.  新建Local Tomcat Server:
 ![image](https://github.com/AngelaViVi/Summer/blob/master/Doc/shot/006-新建本地server配置.png)
 12. 点击Config,选择本机上安装的Tomcat目录,注意到下面有可能会出现一个"Fix"字样,那代表我们还没有设置好关于部署的相关内容:
