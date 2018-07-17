@@ -131,7 +131,7 @@ Idea 2018
 ```
 10. 编辑运行配置选项:
 ![image](https://github.com/AngelaViVi/Summer/blob/master/Doc/shot/005-运行配置选项.png)
-11. 新建Remote Tomcat Server:
+1.  新建Local Tomcat Server:
 ![image](https://github.com/AngelaViVi/Summer/blob/master/Doc/shot/006-新建本地server配置.png)
 12. 点击Config,选择本机上安装的Tomcat目录,注意到下面有可能会出现一个"Fix"字样,那代表我们还没有设置好关于部署的相关内容:
 ![image](https://github.com/AngelaViVi/Summer/blob/master/Doc/shot/007-选择Tomcat路径.png)
