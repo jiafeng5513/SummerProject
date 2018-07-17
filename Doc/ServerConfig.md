@@ -12,7 +12,7 @@ Ubuntu 16.04<br>
 1. `apt install mysql-client`<br>
 2. `apt install libmysqlclient-dev`<br>
 3. `sudo netstat -tap | grep mysql`<br>
-    输出结果是:`tcp        0      0 localhost:mysql         *:*                     LISTEN      30146/mysqld`<br>
+    输出结果是:`tcp 0 0 localhost:mysql *:* LISTEN 30146/mysqld`<br>
 4. 编辑mysql配置文件，把其中bind-address = 127.0.0.1注释了<br>
     使用VI编辑:`vi /etc/mysql/mysql.conf.d/mysqld.cnf `<br>
     或者直接找到文件进行编辑并保存<br>
@@ -73,4 +73,11 @@ Ubuntu 16.04<br>
     CATALINA_HOME=/usr/local/tomcat9
     JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
-8. 启动:`/usr/local/tomcat9/bin/startup.sh`
+8. 启动:
+```bash
+# 直接启动
+/usr/local/tomcat9/bin/startup.sh
+# 启动且将输出定向到回收站
+/usr/local/tomcat9/bin/catalina.sh run > /dev/null 2>&1 &
+```
+
