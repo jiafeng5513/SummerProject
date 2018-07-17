@@ -9,4 +9,12 @@
 1. [Cenyol/SpringMVC](https://github.com/Cenyol/SpringMVC)
 
 ### build
-1. 工具
+1. 工具 JetBrain IDEA
+
+### 简介
+1. Spring<br>
+2. SpringMVC<br>
+3. Hibernate<br>
+4. Maven<br>
+5. Tomcat<br>
+6. Mysql<br>
