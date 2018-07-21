@@ -80,4 +80,10 @@ Ubuntu 16.04<br>
 # 启动且将输出定向到回收站
 /usr/local/tomcat9/bin/catalina.sh run > /dev/null 2>&1 &
 ```
-
+### 服务器环境自动启动
+1. 找到`/etc/rc.local`文件<br>、
+2. 在其中添加启动脚本如下：
+```bash
+/etc/init.d/mysql start
+/usr/local/tomcat9/bin/catalina.sh run > /dev/null 2>&1 &
+```
