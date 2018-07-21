@@ -7,5 +7,5 @@ target/
 *.iws
 
 # java web
-*.jar
 *.war
+*.class
