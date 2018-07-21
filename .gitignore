@@ -5,3 +5,7 @@ target/
 .idea/
 *.iml
 *.iws
+
+# java web
+*.jar
+*.war
