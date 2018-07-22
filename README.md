@@ -7,7 +7,7 @@
 
 ### 参考项目
 1. [Cenyol/SpringMVC](https://github.com/Cenyol/SpringMVC)
-
+2. [bing每日图片API](https://open.saintic.com/#Bing%E4%BB%8A%E6%97%A5%E7%BE%8E%E5%9B%BE)
 ### build
 1. 工具 JetBrain IDEA
 

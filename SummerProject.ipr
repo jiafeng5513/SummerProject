@@ -4,55 +4,24 @@
     <artifact type="exploded-war" name="SummerProject:war exploded">
       <output-path>$PROJECT_DIR$/out/artifacts/SummerProject_war_exploded</output-path>
       <root id="root">
-        <element id="javaee-facet-resources" facet="SummerProject/web/Web" />
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="SummerProject" />
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="project" name="Hibernate 5.3.2-5.3.2" />
-            <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
-            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.11" />
-            <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
-            <element id="library" level="project" name="Spring MVC-4.3.18.RELEASE" />
+            <element id="library" level="project" name="lib" />
           </element>
         </element>
+        <element id="javaee-facet-resources" facet="SummerProject/web/Web" />
       </root>
     </artifact>
   </component>
-  <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="SummerProject" />
-      </profile>
-    </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SummerProject" target="1.5" />
-    </bytecodeTargetLevel>
-  </component>
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@74.82.222.181" uuid="5d9fe81d-d1b6-4298-ba08-523fb146cc89">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://74.82.222.181:3306/Summer</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="90f7024c-346f-41a2-b4c8-49d1325fa60d">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="363d250b-e2a8-4974-a931-3e701a314c37">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
-      <remarks>$PROJECT_DIR$/../SummerProject/hibernate.cfg.xml</remarks>
+      <remarks>$PROJECT_DIR$/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://74.82.222.181:3306/Summer</jdbc-url>
       <driver-properties>
@@ -64,6 +33,15 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
+  </component>
+  <component name="FUSUsageTrigger">
+    <session id="601143519">
+      <usages-collector id="statistics.spring.core.usages.trigger">
+        <counts>
+          <entry key="fixes.SpringFacetInspection.AddFacetFix" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
@@ -71,59 +49,19 @@
     </profile>
     <version value="1.0" />
   </component>
-  <component name="MavenProjectsManager">
-    <option name="originalFiles">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SummerProject.iml" filepath="$PROJECT_DIR$/SummerProject.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="true" project-jdk-name="10" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/../SummerProject/out" />
-  </component>
-  <component name="PublishConfigData" serverName="74.82.222.181">
-    <serverData>
-      <paths name="74.82.222.181">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$/../SummerProject" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" project-jdk-name="10" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-  </component>
-  <component name="WebServers">
-    <option name="servers">
-      <webServer id="aafd2977-d41d-40c6-a76d-56b21744cf0c" name="74.82.222.181" url="http://74.82.222.181:8080">
-        <fileTransfer host="74.82.222.181" port="26067" rootFolder="/usr/local/tomcat9/webapps" accessType="SFTP">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
-          </advancedOptions>
-          <option name="port" value="26067" />
-        </fileTransfer>
-      </webServer>
-    </option>
+    <mapping directory="" vcs="Git" />
   </component>
   <component name="dataSourceStorageLocal">
-    <data-source name="@74.82.222.181" uuid="5d9fe81d-d1b6-4298-ba08-523fb146cc89">
-      <database-info product="MySQL" version="5.7.22-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <introspection-schemas>*:Summer</introspection-schemas>
-    </data-source>
-    <data-source name="hibernate.cfg.xml/Hibernate" uuid="90f7024c-346f-41a2-b4c8-49d1325fa60d">
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="363d250b-e2a8-4974-a931-3e701a314c37">
       <database-info product="MySQL" version="5.7.22-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -135,79 +73,42 @@
     </data-source>
   </component>
   <component name="libraryTable">
-    <library name="Hibernate 5.3.2-5.3.2" type="hibernate">
-      <properties version="5.3.2" />
+    <library name="lib">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/classmate-1.3.4.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/dom4j-1.6.1.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/antlr-2.7.7.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/byte-buddy-1.8.12.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/hibernate-commons-annotations-5.0.4.Final.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/jandex-2.0.5.Final.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/javassist-3.22.0-GA.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/javax.activation-api-1.2.0.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/hibernate-core-5.3.2.Final.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/javax.persistence-api-2.2.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/jboss-logging-3.3.2.Final.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="Maven: com.google.protobuf:protobuf-java:2.6.0">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: mysql:mysql-connector-java:8.0.11">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Spring MVC-4.3.18.RELEASE" type="spring-mvc">
-      <properties version="4.3.18.RELEASE" />
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-webmvc-portlet-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-websocket-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-webmvc-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-web-4.3.18.RELEASE.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="Spring-4.3.18.RELEASE" type="spring">
-      <properties version="4.3.18.RELEASE" />
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-aspects-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-aop-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-context-support-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-beans-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-expression-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-context-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-instrument-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-jdbc-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-orm-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-oxm-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-core-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-test-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-messaging-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/commons-logging-1.2.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/aopalliance-1.0.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-tx-4.3.18.RELEASE.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../SummerProject/lib/spring-jms-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-context-support-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-test-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-instrument-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-websocket-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-portlet-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-web-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-jms-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-tx-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-aop-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/byte-buddy-1.8.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jandex-2.0.5.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.2.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/classmate-1.3.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-orm-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-aspects-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-messaging-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-expression-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/hibernate-commons-annotations-5.0.4.Final.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/aopalliance-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javassist-3.22.0-GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-core-4.3.18.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/spring-oxm-4.3.18.RELEASE.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
