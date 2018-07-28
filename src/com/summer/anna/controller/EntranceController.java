@@ -5,9 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class HelloWorldController {
+public class EntranceController {
+    /*
+    訪問入口定向
+     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index() {
-        return "login";
+    public String Entrance() {
+        System.out.println("http get,導向到主頁");
+        return "redirect:html/home.html";
     }
 }

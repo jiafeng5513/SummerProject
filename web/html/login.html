@@ -2,113 +2,117 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>SummerProject | Login</title>
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/LoginStyle.css">
+    <meta charset="UTF-8">
+    <title>SummerProject | Login</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/LoginStyle.css">
 </head>
 
 <!-- 使用bing每日图片作为网站背景 -->
 <body style="background-image:url(https://open.saintic.com/api/bingPic/)">
-  <h1>SummerProject :<span>A</span> <span>s</span><span>e</span><span>c</span><span>r</span><span>e</span><span>t</span> WebSite</h1>
-  <div class="form">
+<h1>SummerProject :<span>A</span> <span>s</span><span>e</span><span>c</span><span>r</span><span>e</span><span>t</span>
+    WebSite</h1>
+<div class="form">
 
     <ul class="tab-group">
-      <li class="tab active">
-        <a href="#signup">注册</a>
-      </li>
-      <li class="tab">
-        <a href="#login">登录</a>
-      </li>
+        <li class="tab active">
+            <a href="#signup">注册</a>
+        </li>
+        <li class="tab">
+            <a href="#login">登录</a>
+        </li>
     </ul>
 
     <div class="tab-content">
-      <div id="signup">
-        <h1>加入我们的秘密小站!</h1>
-        <form action="/" method="post">
+        <div id="signup">
+            <h1>加入我们的秘密小站!</h1>
+            <form action="/" method="post">
 
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name
-                <span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" />
-            </div>
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>
+                            First Name
+                            <span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off"/>
+                    </div>
 
-            <div class="field-wrap">
-              <label>
-                Last Name
-                <span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" />
-            </div>
-          </div>
+                    <div class="field-wrap">
+                        <label>
+                            Last Name
+                            <span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off"/>
+                    </div>
+                </div>
 
-          <div class="field-wrap">
-            <label>
-              Email Address
-              <span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off" />
-          </div>
+                <div class="field-wrap">
+                    <label>
+                        Email Address
+                        <span class="req">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off"/>
+                </div>
 
-          <div class="field-wrap">
-            <label>
-              Set A Password
-              <span class="req">*</span>
-            </label>
-            <input type="password" required autocomplete="off" />
-          </div>
-          <div class="field-wrap">
-            <label>
-              Password Again
-              <span class="req">*</span>
-            </label>
-            <input type="password" required autocomplete="off" />
-          </div>
-          <button type="submit" class="button button-block" />Get Started</button>
+                <div class="field-wrap">
+                    <label>
+                        Set A Password
+                        <span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off"/>
+                </div>
+                <div class="field-wrap">
+                    <label>
+                        Password Again
+                        <span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off"/>
+                </div>
+                <button type="submit" class="button button-block"/>
+                Get Started</button>
 
-        </form>
-      </div>
-      <div id="login">
-        <h1>欢迎回来!</h1>
-        <form action="/" method="post">
-          <div class="field-wrap">
-            <label>
-              Email Address
-              <span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off" />
-          </div>
-          <div class="field-wrap">
-            <label>
-              Password
-              <span class="req">*</span>
-            </label>
-            <input type="password" required autocomplete="off" />
-          </div>
-          <p class="forgot">
-            <a href="#">忘记密码</a>
-          </p>
-          <button class="button button-block" />Log In</button>
+            </form>
+        </div>
+        <div id="login">
+            <h1>欢迎回来!</h1>
+            <form  method="post" action="/html/LoginAction">
+                <div class="field-wrap">
+                    <label>
+                        Email Address
+                        <span class="req">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off"/>
+                </div>
+                <div class="field-wrap">
+                    <label>
+                        Password
+                        <span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off"/>
+                </div>
+                <p class="forgot">
+                    <a href="#">忘记密码</a>
+                </p>
+                <button class="button button-block"/>
+                Log In</button>
 
-        </form>
+            </form>
 
-      </div>
+        </div>
 
     </div>
     <!-- tab-content -->
 
-  </div>
-  <!-- /form -->
-  <script src='js/jquery.min.js'></script>
-  <script src="js/login.js"></script>
+</div>
+<!-- /form -->
+<script src='js/jquery-1.10.2.min.js'></script>
+<script src="js/login.js"></script>
 
-  <footer>
-    &copy; 2018 Created by yimi and anna. All rights reserved | Source in <a href="https://github.com/AngelaViVi/SummerProject">Github</a>
-  </footer>
+<footer>
+    &copy; 2018 Created by yimi and anna. All rights reserved | Source in <a
+        href="https://github.com/AngelaViVi/SummerProject">Github</a>
+</footer>
 </body>
 
 </html>

@@ -23,7 +23,7 @@
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <!-- 这里是页面的查找位置,指明的是页面所在目录和页面文件的扩展名 -->
-        <property name="prefix" value="./"/>
+        <property name="prefix" value="./html/"/>
         <property name="suffix" value=".html"/>
     </bean>
 </beans>
