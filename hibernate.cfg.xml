@@ -6,14 +6,17 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://74.82.222.181:3306/Summer</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <mapping class="com.summer.anna.entity.BlogEntity"/>
-    <mapping resource="com/summer/anna/entity/BlogEntity.hbm.xml"/>
-    <mapping resource="com/summer/anna/entity/SpringMvcUserEntity.hbm.xml"/>
-    <mapping class="com.summer.anna.entity.SpringMvcUserEntity"/>
+
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
+    <mapping class="com.summer.anna.entity.BlogEntity"/>
+    <mapping resource="com/summer/anna/entity/BlogEntity.hbm.xml"/>
+    <mapping class="com.summer.anna.entity.CommentEntity"/>
+    <mapping resource="com/summer/anna/entity/CommentEntity.hbm.xml"/>
+    <mapping class="com.summer.anna.entity.UserEntity"/>
+    <mapping resource="com/summer/anna/entity/UserEntity.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

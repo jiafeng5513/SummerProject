@@ -5,8 +5,40 @@
     <meta charset="UTF-8">
     <title>SummerProject | Login</title>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/LoginStyle.css">
+    <script type="text/javascript">
+        <!--ajax提交登录参数到后台-->
+        function PostSignInParam(){
+            var email=$("#emailAdd").val();
+            var psw=$("#password").val();
+            //alert("js执行");
+            $.ajax({
+                type: 'POST',
+                url: '/html/LoginAction' ,//注意这个url要和control对应上
+                dataType: 'text',
+                contentType:'application/json;charset=UTF-8',
+                data:JSON.stringify({'emailAdd':email,'password':psw}),  //提交json字符串数组，如果提交json字符串去掉[]
+                success:function(data){
+                    //alert("前端收到后端返回值是:"+data);
+                    //$("#allBody").html(data);
+                    if (data=="succeed"){
+                        //跳转到登陆成功的页面
+                        self.location='/html/blogList.html';
+                    } else{
+                        //登录失败,更新
+                        $("#msg").text("登录失败");
+                        //self.location='/html/loginFailure.html';
+                    }
+                },
+                error:function(textStatus, errorThrown){
+                    console.log(textStatus);
+                    alert("错误:"+textStatus.toString()+errorThrown);
+                }
+            });
+        }
+    </script>
+
 </head>
 
 <!-- 使用bing每日图片作为网站背景 -->
@@ -69,32 +101,33 @@
                     </label>
                     <input type="password" required autocomplete="off"/>
                 </div>
-                <button type="submit" class="button button-block"/>
+                <button class="button button-block"/>
                 Get Started</button>
 
             </form>
         </div>
         <div id="login">
             <h1>欢迎回来!</h1>
-            <form  method="post" action="/html/LoginAction">
-                <div class="field-wrap">
+            <form  method="post">
+                <div class="field-wrap" >
                     <label>
                         Email Address
                         <span class="req">*</span>
                     </label>
-                    <input type="email" required autocomplete="off"/>
+                    <input type="email" name="emailAdd" id="emailAdd" required autocomplete="off"/>
                 </div>
-                <div class="field-wrap">
+                <div class="field-wrap" >
                     <label>
                         Password
                         <span class="req">*</span>
                     </label>
-                    <input type="password" required autocomplete="off"/>
+                    <input type="password" name="password" id="password" required autocomplete="off"/>
                 </div>
+                <p id="msg"></p>
                 <p class="forgot">
                     <a href="#">忘记密码</a>
                 </p>
-                <button class="button button-block"/>
+                <button class="button button-block" onclick="PostSignInParam();"/>
                 Log In</button>
 
             </form>

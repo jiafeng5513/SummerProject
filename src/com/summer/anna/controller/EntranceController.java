@@ -11,7 +11,6 @@ public class EntranceController {
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String Entrance() {
-        System.out.println("http get,導向到主頁");
         return "redirect:html/home.html";
     }
 }

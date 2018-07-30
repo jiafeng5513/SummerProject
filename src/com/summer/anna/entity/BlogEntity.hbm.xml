@@ -5,14 +5,14 @@
 <hibernate-mapping>
 
     <class name="com.summer.anna.entity.BlogEntity" table="blog" schema="Summer">
-        <id name="id">
-            <column name="id" sql-type="int(11)"/>
+        <id name="blogId">
+            <column name="blogID" sql-type="smallint(6)"/>
         </id>
-        <property name="content">
-            <column name="content" sql-type="varchar(255)" not-null="true"/>
+        <property name="blogText">
+            <column name="blogText" sql-type="mediumtext" not-null="true"/>
         </property>
-        <property name="title">
-            <column name="title" sql-type="varchar(100)" length="100" not-null="true"/>
+        <property name="likeNum">
+            <column name="likeNum" sql-type="int(11)" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

@@ -5,38 +5,38 @@ import javax.persistence.*;
 @Entity
 @Table(name = "blog", schema = "Summer", catalog = "")
 public class BlogEntity {
-    private int id;
-    private String content;
-    private String title;
+    private short blogId;
+    private String blogText;
+    private Integer likeNum;
 
     @Id
-    @Column(name = "id", nullable = false)
-    public int getId() {
-        return id;
+    @Column(name = "blogID", nullable = false)
+    public short getBlogId() {
+        return blogId;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Basic
-    @Column(name = "content", nullable = true, length = 255)
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setBlogId(short blogId) {
+        this.blogId = blogId;
     }
 
     @Basic
-    @Column(name = "title", nullable = true, length = 100)
-    public String getTitle() {
-        return title;
+    @Column(name = "blogText", nullable = true, length = -1)
+    public String getBlogText() {
+        return blogText;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setBlogText(String blogText) {
+        this.blogText = blogText;
+    }
+
+    @Basic
+    @Column(name = "likeNum", nullable = true)
+    public Integer getLikeNum() {
+        return likeNum;
+    }
+
+    public void setLikeNum(Integer likeNum) {
+        this.likeNum = likeNum;
     }
 
     @Override
@@ -46,18 +46,18 @@ public class BlogEntity {
 
         BlogEntity that = (BlogEntity) o;
 
-        if (id != that.id) return false;
-        if (content != null ? !content.equals(that.content) : that.content != null) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
+        if (blogId != that.blogId) return false;
+        if (blogText != null ? !blogText.equals(that.blogText) : that.blogText != null) return false;
+        if (likeNum != null ? !likeNum.equals(that.likeNum) : that.likeNum != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (content != null ? content.hashCode() : 0);
-        result = 31 * result + (title != null ? title.hashCode() : 0);
+        int result = (int) blogId;
+        result = 31 * result + (blogText != null ? blogText.hashCode() : 0);
+        result = 31 * result + (likeNum != null ? likeNum.hashCode() : 0);
         return result;
     }
 }

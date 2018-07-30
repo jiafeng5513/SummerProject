@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hibernate.cfg.xml/Hibernate">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
     <root id="1">
       <ServerVersion>5.7.22</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -10,7 +10,7 @@
     <schema id="2" parent="1" name="Summer">
       <Current>1</Current>
       <Visible>1</Visible>
-      <Collation>utf8_general_ci</Collation>
+      <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="3" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
@@ -913,68 +913,110 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="229" parent="2" name="blog"/>
-    <table id="230" parent="2" name="spring_mvc_user"/>
-    <column id="231" parent="229" name="id">
+    <table id="230" parent="2" name="comment"/>
+    <table id="231" parent="2" name="user"/>
+    <column id="232" parent="229" name="blogID">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="229" name="content">
+    <column id="233" parent="229" name="blogText">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="229" name="title">
+    <column id="234" parent="229" name="likeNum">
       <Position>3</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="234" parent="229" name="userid">
-      <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="235" parent="229" name="FK2E2FA2359C8E74">
-      <ColNames>userid</ColNames>
+    <column id="235" parent="229" name="authorName">
+      <Position>4</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="236" parent="229" name="authorName">
+      <ColNames>authorName</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="236" parent="229" name="PRIMARY">
+    <key id="237" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>blogID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="237" parent="229" name="FK2E2FA2359C8E74">
-      <ColNames>userid</ColNames>
+    <foreign-key id="238" parent="229" name="blog_ibfk_1">
+      <ColNames>authorName</ColNames>
       <RefSchemaName>Summer</RefSchemaName>
-      <RefTableName>spring_mvc_user</RefTableName>
-      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+      <RefColNames>userName</RefColNames>
     </foreign-key>
-    <column id="238" parent="230" name="id">
+    <column id="239" parent="230" name="commentID">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="230" name="firstName">
+    <column id="240" parent="230" name="commentText">
       <Position>2</Position>
-      <DataType>varchar(32)|0s</DataType>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="230" name="lastName">
+    <column id="241" parent="230" name="commentName">
       <Position>3</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="230" name="password">
+    <column id="242" parent="230" name="commentBlog">
       <Position>4</Position>
+      <DataType>smallint(6)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="243" parent="230" name="commentName">
+      <ColNames>commentName</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="244" parent="230" name="commentBlog">
+      <ColNames>commentBlog</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="245" parent="230" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>commentID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="246" parent="230" name="comment_ibfk_1">
+      <ColNames>commentName</ColNames>
+      <RefSchemaName>Summer</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>userName</RefColNames>
+    </foreign-key>
+    <foreign-key id="247" parent="230" name="comment_ibfk_2">
+      <ColNames>commentBlog</ColNames>
+      <RefSchemaName>Summer</RefSchemaName>
+      <RefTableName>blog</RefTableName>
+      <RefColNames>blogID</RefColNames>
+    </foreign-key>
+    <column id="248" parent="231" name="userName">
+      <Position>1</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="231" name="password">
+      <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="242" parent="230" name="PRIMARY">
+    <column id="250" parent="231" name="emailAdd">
+      <Position>3</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="251" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>userName</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>
