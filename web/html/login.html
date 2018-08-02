@@ -13,29 +13,35 @@
             var email=$("#emailAdd").val();
             var psw=$("#password").val();
             //alert("js执行");
+            //document.getElementById("#loginbutton").disabled=true;
+            //document.getElementById("#loginbutton").style("button[disabled]")
             $.ajax({
                 type: 'POST',
                 url: '/html/LoginAction' ,//注意这个url要和control对应上
+                async:true,//true=异步,false=同步
                 dataType: 'text',
                 contentType:'application/json;charset=UTF-8',
                 data:JSON.stringify({'emailAdd':email,'password':psw}),  //提交json字符串数组，如果提交json字符串去掉[]
                 success:function(data){
-                    //alert("前端收到后端返回值是:"+data);
                     //$("#allBody").html(data);
                     if (data=="succeed"){
                         //跳转到登陆成功的页面
-                        self.location='/html/blogList.html';
+                        window.location.replace("/html/blogList.html");
                     } else{
                         //登录失败,更新
                         $("#msg").text("登录失败");
                         //self.location='/html/loginFailure.html';
                     }
                 },
-                error:function(textStatus, errorThrown){
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    console.log(XMLHttpRequest.status);
+                    // 状态
+                    console.log(XMLHttpRequest.readyState);
+                    // 错误信息
                     console.log(textStatus);
-                    alert("错误:"+textStatus.toString()+errorThrown);
                 }
             });
+            return false;//在这里返回false
         }
     </script>
 
@@ -108,7 +114,7 @@
         </div>
         <div id="login">
             <h1>欢迎回来!</h1>
-            <form  method="post">
+            <form method="post">
                 <div class="field-wrap" >
                     <label>
                         Email Address
@@ -127,10 +133,9 @@
                 <p class="forgot">
                     <a href="#">忘记密码</a>
                 </p>
-                <button class="button button-block" onclick="PostSignInParam();"/>
-                Log In</button>
-
             </form>
+                <button class="button button-block" id="loginbutton" onclick="PostSignInParam();"/>
+                Log In</button>
 
         </div>
 
@@ -139,7 +144,7 @@
 
 </div>
 <!-- /form -->
-<script src='js/jquery-1.10.2.min.js'></script>
+<script src='js/jquery-3.3.1.min.js'></script>
 <script src="js/login.js"></script>
 
 <footer>

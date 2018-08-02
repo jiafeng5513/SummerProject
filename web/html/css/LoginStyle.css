@@ -165,6 +165,22 @@ textarea {
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
+
+.button[disabled] {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: #A9A9A9;
+  color: #060503;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
 .button:hover, .button:focus {
   background: #179b77;
 }

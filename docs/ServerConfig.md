@@ -18,7 +18,7 @@ Ubuntu 16.04<br>
     或者直接找到文件进行编辑并保存<br>
 5. 使用root进入mysql命令行，执行如下2个命令，示例中mysql的root账号密码：0000<br>
     先进入MySQL命令模式:<br>
-    `mysql -uroot -p`<br>
+    `mysql -u root -p`<br>
         要输入mysql的root密码(0000)<br>
     `grant all on *.* to root@'%' identified by '0000' with grant option;`<br>
      `flush privileges;`<br>

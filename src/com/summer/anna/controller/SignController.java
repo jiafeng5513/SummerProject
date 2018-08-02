@@ -31,15 +31,17 @@ public class SignController {
         //如果页面传的是json字符串，用下列方式解析
 		Map<String, Object> m=(Map<String, Object> )jo.parse(param); //string转map
 		JSONObject parseObject = jo.parseObject(param); //string转json
-		System.out.println("接收到的json obj "+parseObject);
+		//System.out.println("接收到的json obj "+parseObject);
 
         String email=(String)parseObject.get("emailAdd");
         String passwd=(String)parseObject.get("password");
-        System.out.println("解析出来的email:"+email+"  解析出来的psw:"+passwd);
+        //System.out.println("解析出来的email:"+email+"  解析出来的psw:"+passwd);
         UserDAO _userDAO=new UserDAO();
         if (_userDAO.SignIn(email,passwd)){
+            System.out.println("密码验证成功");
             return "succeed";
         }else{
+            System.out.println("密码验证失败");
             return "failure";
         }
 
