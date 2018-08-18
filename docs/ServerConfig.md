@@ -87,3 +87,16 @@ Ubuntu 16.04<br>
 /etc/init.d/mysql start
 /usr/local/tomcat9/bin/catalina.sh run > /dev/null 2>&1 &
 ```
+### MySQL时区设置
+1. 进入MySQL命令模式:
+`mysql -u root -p`
+2. 查看当前时间:
+`select now();`
+3. 查看当前时区:
+`show variables like "%time_zone%";`
+4. 修改时区:
+```SQL
+set global time_zone = '+8:00'; ##修改mysql全局时区为北京时间，即我们所在的东8区
+set time_zone = '+8:00';        ##修改当前会话时区
+flush privileges;               ##立即生效
+```
